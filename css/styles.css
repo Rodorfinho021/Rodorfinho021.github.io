@@ -1,0 +1,38 @@
+
+.css img{
+    display: block;
+    margin: auto;
+    width: 1600px;
+    height: 150px;
+
+}
+
+.im2 img{
+    display: block;
+    margin: auto;
+    border-radius: 60%;
+    border: 2px solid black;
+
+}
+
+
+body {
+    background-color: rgb(109, 100, 100);
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    text-align: center;
+    
+}
+
+p1 {
+    color: rgb(255, 255, 255); 
+}
+
+
+p2 {
+   color: rgb(255, 255, 255); 
+}
+
