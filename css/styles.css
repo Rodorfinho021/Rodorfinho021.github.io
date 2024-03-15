@@ -48,6 +48,7 @@ body {
 
 
 .page2 {
+    display: inline-block;
     font-size: 17px;
     text-transform: uppercase;
     border-radius: 30px;
@@ -56,6 +57,7 @@ body {
     background-color: green;
     padding: 15px 25px 15px 25px;
     text-align: center;
+
 }
 
 .page2:hover {
@@ -65,17 +67,32 @@ body {
 }
 
 #page2 {
-    
+    display: inline-block;
     padding-top: 20px;
     text-align: center;
+    
 }
 
-
-.div-central h1{
+.div-central {
     text-align: center;
 
 }
 
 .div-imagem {
+    background-size: contain;
+    
+
+}
+
+
+.div-imagem .imagem-page2_01 {
+    height: 400px;
+    width: 800px;
+    border-radius: 100px;
+
+}
+
+.div-central .paragrafos{
     text-align: center;
 }
+
