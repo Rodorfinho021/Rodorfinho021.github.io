@@ -35,3 +35,27 @@ main {
 .information-right {
     margin-left: 30px;
 }
+
+.sub-informarions {
+    margin-top: 30px;
+    display: flex;
+    justify-content: right;
+    gap: 1em;
+    
+    
+}
+
+.circulos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+.texto-sub-information {
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+}
+
