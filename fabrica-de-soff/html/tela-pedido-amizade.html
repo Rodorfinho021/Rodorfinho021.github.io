@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Pedidos de Amizade</title>
+  <style>
+    .icone-conteiner {
+    display: flex; 
+    justify-content: center; 
+    gap: 15px; 
+    padding: 10px; 
+    margin-top: 100px;
+}
+
+.icone {
+    width: 40px;
+    height: auto; 
+    cursor: pointer; 
+    transition: transform 0.2s; 
+}
+
+.icone:hover {
+    transform: scale(1.1); 
+}
+
+    body {
+      margin: 0; font-family: Arial, sans-serif; background-color: #2b0040; color: white; display: flex; height: 100vh;
+    }
+    .left-panel {
+      width: 450px; background-color: #1b002c; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 20px 0;
+    }
+    .logo {
+      width: 80px; height: 80px;background-color: #690d76; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 24px; font-weight: bold;
+    }
+    .icons {
+      display: flex; gap: 90px; margin: 20px 0;
+    }
+    .icons img {
+      width: 50px; height: 50px; cursor: pointer;
+    }
+    .right-panel {
+      flex: 1; padding: 30px; margin: auto; max-width: 700px; background: linear-gradient(to right, #2b0040, #690d76); border-radius: 15px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+      flex: 1;
+  padding: 30px;
+  margin: auto;
+  max-width: 700px;
+  background-image: linear-gradient(to right, #800080, #000);
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    }
+    .header {
+      text-align: center;
+      color: black;
+      font-size: 30px;
+    }
+    .friend-request { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;
+      display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding: 15px;
+  background-image: linear-gradient(to right, #800080, #000);
+  border-radius: 10px;
+     }
+    .profile { display: flex; align-items: center; }
+    .profile-icon { width: 60px; height: 60px; background-color: #550066; border-radius: 50%; margin-right: 15px; }
+    .buttons { display: flex; gap: 10px; }
+    button { border: none; border-radius: 8px; padding: 10px 15px; font-size: 16px; cursor: pointer; }
+    .accept-btn { background-color: #4caf50; color: white; }
+    .accept-btn:hover { background-color: #45a049; }
+    .decline-btn { background-color: #f44336; color: white; }
+    .decline-btn:hover { background-color: #e53935; }
+  </style>
+</head>
+<body>
+  <!-- Painel esquerdo -->
+  <div class="left-panel">
+    <div class="logo">N</div>
+    <div class="icone-conteiner">
+      <a href="/html/aparéncia.html" target="_blank">
+          <img src="/img/simbolo-de-interface-da-roda-dentada-de-configuracao.png" alt="Configuração" class="icone">
+      </a>
+      <a href="/html/notificação.html" target="_blank">
+          <img src="/img/sino.png" alt="Notificações" class="icone">
+      </a>
+      <a href="/html/index_canais.html" target="_blank">
+          <img src="/img/casa.png" alt="Início" class="icone">
+      </a>
+  </div>
+  </div>
+
+  <!-- Painel direito -->
+  <div class="right-panel">
+    <div class="header">Pedidos de amizade</div>
+    <div class="friend-request" id="request1">
+      <div class="profile">
+        <div class="profile-icon"></div>
+        <div class="username">Usuario01</div>
+      </div>
+      <div class="buttons">
+        <button class="accept-btn" onclick="respond('request1', 'Pedido aceito!')">aceitar</button>
+        <button class="decline-btn" onclick="respond('request1', 'Pedido recusado!')">recusar</button>
+      </div>
+    </div>
+    <div class="friend-request" id="request2">
+      <div class="profile">
+        <div class="profile-icon"></div>
+        <div class="username">Usuario02</div>
+      </div>
+      <div class="buttons">
+        <button class="accept-btn" onclick="respond('request2', 'Pedido aceito!')">aceitar</button>
+        <button class="decline-btn" onclick="respond('request2', 'Pedido recusado!')">recusar</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function respond(id, message) {
+      document.getElementById(id).innerHTML = `<span style="font-weight: bold; color: ${message.includes('aceito') ? '#4caf50' : '#f44336'};">${message}</span>`;
+    }
+  </script>
+</body>
+</html>

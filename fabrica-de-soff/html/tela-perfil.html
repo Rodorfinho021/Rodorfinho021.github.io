@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuário</title>
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: 
+            linear-gradient(
+                to right,
+                #800080,
+                #000);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Container principal */
+        .container-perfil {
+            background-image: 
+            linear-gradient(
+                to right,
+                #800080,
+                #000);
+            width: 450px;
+            padding: 20px;
+            border-radius: 20px;
+            border-style: solid;
+            border-color: #000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+
+        /* Foto de perfil */
+        .foto-perfil {
+            width: 180px; /* Aumenta o tamanho da foto */
+            height: 180px; /* Aumenta o tamanho da foto */
+            background-color: #b9b9b9;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+            display: block;
+        }
+
+        /* Campo de Recado */
+        .recado {
+            text-align: center;
+            margin: 10px 0;
+            font-size: 16px;
+            color: #ccc;
+        }
+
+        /* Campos de entrada de dados */
+        .campo {
+            display: flex;
+            flex-direction: column;
+            margin: 10px 0;
+        }
+
+        .campo label {
+            color: #ccc;
+            font-size: 14px;
+            margin-bottom: 3px;
+        }
+
+        .campo input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #b9b9b9;
+            border-radius: 5px;
+            font-size: 14px;
+            background-color: #444444;
+            color: white;
+        }
+
+        /* Agrupamento de campos */
+        .nome-sobrenome, .data-genero {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .nome-sobrenome .campo, .data-genero .campo {
+            width: 48%;
+        }
+
+        /* Botões */
+        .botoes {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .botao {
+            width: 48%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            font-weight: bold;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        .cancelar {
+            background-color: #910000;
+        }
+
+        .atualizar {
+            background-color: #00661a;
+            color: rgb(255, 255, 255);
+        }
+
+        /* Estilo adicional para campos de senha */
+        .senha-confirmacao {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Botão para alterar a foto */
+        .botao-alterar-foto {
+            width: 100%;
+            padding: 8px;
+            background-color: #00661a;
+            color: rgb(255, 255, 255);
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        /* Estilo para o input de arquivo (invisível) */
+        #inputFoto {
+            display: none;
+        }
+
+        /* Estilo para a mensagem de erro */
+        .erro {
+            color: #D00000;
+            font-size: 14px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container-perfil">
+        <!-- Foto do perfil -->
+        <img src="https://via.placeholder.com/180" alt="Foto de perfil" class="foto-perfil">
+        <div class="recado">Recado</div>
+
+        <!-- Botão para alterar a foto -->
+        <label for="inputFoto" class="botao-alterar-foto">Alterar Foto</label>
+        <input type="file" id="inputFoto" accept="image/*" onchange="alterarFoto()">
+
+        <!-- Campos de informações do usuário -->
+        <div class="nome-sobrenome">
+            <div class="campo">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" value="João">
+            </div>
+            <div class="campo">
+                <label for="sobrenome">Sobrenome</label>
+                <input type="text" id="sobrenome" value="Arriba">
+            </div>
+        </div>
+
+        <div class="campo">
+            <label for="email">Email</label>
+            <input type="email" id="email" value="joaoarriba081k@gmail.com">
+        </div>
+
+        <div class="data-genero">
+            <div class="campo">
+                <label for="dataNascimento">Data de Nascimento</label>
+                <input type="date" id="dataNascimento" value="1998-06-17">
+            </div>
+            <div class="campo">
+                <label for="genero">Gênero</label>
+                <input type="text" id="genero" value="Masculino">
+            </div>
+        </div>
+
+        <div class="campo senha-confirmacao">
+            <label for="senha">Senha</label>
+            <input type="password" id="senha">
+        </div>
+        <div class="campo senha-confirmacao">
+            <label for="confirmacaoSenha">Confirmação de Senha</label>
+            <input type="password" id="confirmacaoSenha">
+        </div>
+
+        <!-- Mensagem de erro -->
+        <div id="mensagemErro" class="erro"></div>
+
+        <!-- Botões de cancelar e atualizar -->
+        <div class="botoes">
+            <button class="botao cancelar" onclick="cancelar()">Cancelar</button>
+            <button class="botao atualizar" onclick="atualizar()">Atualizar</button>
+        </div>
+    </div>
+
+    <script>
+        // Função para cancelar a edição
+        function cancelar() {
+            alert("As alterações foram canceladas.");
+        }
+
+        // Função para atualizar as informações
+        function atualizar() {
+            const senha = document.getElementById("senha").value;
+            const confirmacaoSenha = document.getElementById("confirmacaoSenha").value;
+            const mensagemErro = document.getElementById("mensagemErro");
+
+            if (senha !== confirmacaoSenha) {
+                // Se as senhas não coincidirem, exibe a mensagem de erro
+                mensagemErro.textContent = "As senhas não coincidem. Tente novamente.";
+            } else {
+                // Se as senhas coincidirem, exibe a mensagem de sucesso e limpa o erro
+                mensagemErro.textContent = "";
+                alert("Informações atualizadas com sucesso!");
+            }
+        }
+
+        // Função para alterar a foto de perfil
+        function alterarFoto() {
+            const inputFoto = document.getElementById("inputFoto");
+            const fotoPerfil = document.querySelector(".foto-perfil");
+            const file = inputFoto.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    fotoPerfil.src = e.target.result; // Atualiza a foto de perfil
+                }
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
+
+</body>
+</html>

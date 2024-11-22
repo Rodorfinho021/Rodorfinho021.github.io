@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Interface</title>
+  <link rel="stylesheet" href="../styles-css/style_amigos.css">
+</head>
+<body>
+  <div id="body-main">
+    <div id="left-side">
+      <header id="header">
+        <div class="back">
+            <a href="../html/index_canais.html"> <svg width="33" height="30" viewBox="0 0 33 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <rect width="33" height="30" fill="url(#pattern0_3_47)"/>
+                <defs>
+                <pattern id="pattern0_3_47" patternContentUnits="objectBoundingBox" width="1" height="1">
+                <use xlink:href="#image0_3_47" transform="matrix(0.00710227 0 0 0.0078125 0.0454545 0)"/>
+                </pattern>
+                <image id="image0_3_47" width="128" height="128" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAQAAABpN6lAAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAHdElNRQfhCRkMATQAeCRzAAABP0lEQVR42u3bPU4CYRgE4NFaT6CtoBcALyu2aiP2ehv8q8BAvxYaY7GKCPHF7PN8LSEzkw0hm90EAAAAAAAAAGB1vVzmKZOMclAdpcIw0zTvZ9K9CYaZfdRv0uSsOlBt/SaT6ki19Zs8Voeqrd/kojpWbf1petXB/sagtf4sw+pg6quvvvrqq6+++uqrr7766quvvvq/0363Z9vPIjc52UT9/qf7/P/tTHO8/gDX5TXWOeNl9XaWDjDP3iYupCKL7H//gd3qhNWWD3BbHXEtd+t/Ra/rP4LJaV7Kq6x+5hlvpv7bBJ3+I2QCE5jABCYwgQlMYAITmMAEJvjhBNMMqoOZwATbMMFRdbDqCTrzsPRXE3Tocfn2CTr1wkTbBKPqQLUT3Hfvpakk6ecqz3nIeQ6rowAAAAAAAAAAAABd9gpvFckkvCshWgAAAC56VFh0ZGF0ZTpjcmVhdGUAAHjaMzIwNNc1sNQ1Mg0xNLIyMLQyNdQ2MLAyMAAAQeMFDF26RQsAAAAuelRYdGRhdGU6bW9kaWZ5AAB42jMyMDTXNbDUNTINMTSyMjC0MjXUNjCwMjAAAEHjBQx0he2DAAAAAElFTkSuQmCC"/>
+                </defs>
+                </svg></a>
+                Amigos
+        </div>
+        <div class="icons">
+
+          <div class="icon-container">
+
+          <a href="../html/notificação.html"> <span><svg width="41" height="34" viewBox="0 0 41 34" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <rect width="41" height="34" fill="url(#pattern0_10_9)"/>
+            <defs>
+            <pattern id="pattern0_10_9" patternContentUnits="objectBoundingBox" width="1" height="1">
+            <use xlink:href="#image0_10_9" transform="matrix(0.00647866 0 0 0.0078125 0.0853659 0)"/>
+            </pattern>
+            <image id="image0_10_9" width="128" height="128" xlink:href="data:image/png;base64,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"/>
+            </defs>
+            </svg>
+            </span></a>
+
+            <a href="../html/index_adicionar_amigos.html"> <span><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <rect width="28" height="28" fill="url(#pattern0_3_46)"/>
+                <defs>
+                <pattern id="pattern0_3_46" patternContentUnits="objectBoundingBox" width="1" height="1">
+                <use xlink:href="#image0_3_46" transform="scale(0.0078125)"/>
+                </pattern>
+                <image id="image0_3_46" width="128" height="128" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAQAAABpN6lAAAABu0lEQVR42u3cQWrCQABA0Z+JrZeovYc9goK4Egy5hLVHcSseyZWHcOUBoplCCRSLqyYpKfP/gJDNaB6jJiKDmZmZmZmZmZmZ/VWBEaF5TLBwf5Ti6U/YcuDAB5PUCAJQcCFSUxO5UKREkAMLIpErFRVXIpEFkJNAGfDEkUhFbEZF5MgTkKWx/KfciD/GjSkQ0ngDrIjU3yffHK2APA2Agni/Br6OCgEEEEAAAQQQQAABBBBAAAEEEEAAAQQQQAABBBBAAAEEEECA4ZQRyFuMZ6B8CFACz63mDmT0XE7WwQpYPwRYd7ACMvK+l++YN9YUvx4lS3YP/x+wY0nZYuY1b4yBQE8FYM6pebnDGzWRE/O+CAJQNk9Uc2szHgO2n7WZt+yDIACvnIlUxAGPisiZVyCj00bAhub0B0+wAUbdr4D9vwHYA0EA3wJ+CPo12D3BbPAXQrO+rwXHTAd7KTxlDARvhrwd9gcRAQQQQAABBBBAAAEEEEAAAQQQQAABBBBAAAEEEEAAAQQQQAC30nIzNbfTG8KGivXdhoo1CyB3S01SInjhnQMHtkyA4La6bqxsZmZmZmZmZmZmvfcJBeN6K3Sq+Q0AAAAASUVORK5CYII="/>
+                </defs>
+                </svg>
+                </span>
+            </a>
+
+               <a href="../html/aparéncia.html"> <span><svg width="34" height="32" viewBox="0 0 34 32" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect width="34" height="32" fill="url(#pattern0_9_8)"/>
+                    <defs>
+                    <pattern id="pattern0_9_8" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_9_8" transform="matrix(0.00735294 0 0 0.0078125 0.0294118 0)"/>
+                    </pattern>
+                    <image id="image0_9_8" width="128" height="128" xlink:href="data:image/png;base64,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"/>
+                    </defs>
+                    </svg>
+                    </span>
+                </a>
+          
+        </div>
+      </header>
+      
+      <!-- Barra de pesquisa agora acima de "Meus Amigos" -->
+      <input type="text" id="search" placeholder="Pesquisar">
+      
+      <div id="friends-header">
+        <h2>Meus Amigos</h2>
+        <button class="remove-friends">Remover amigos</button>
+      </div>
+
+      <section id="friends">
+        <div class="friend">
+          <img src="https://via.placeholder.com/40" alt="Pervalovisk">
+          <div class="friend-info">
+            <h3>Pervalovisk</h3>
+            <p>lua sombrai sol radiante</p>
+          </div>
+        </div>
+        <div class="friend">
+          <img src="https://via.placeholder.com/40" alt="João">
+          <div class="friend-info">
+            <h3>João</h3>
+            <p>Sucesso é consequência do mérito</p>
+          </div>
+        </div>
+      </section>
+      <footer id="logo">
+        <svg width="210" height="111" viewBox="0 0 210 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M42.884 110H1L40.0444 1H78.3788L111.744 50.5455L96.8362 68.8392L56.372 20.0559L28.686 81.035L42.884 110Z" stroke="white"/>
+            <path d="M47.1433 61.979L56.372 38.3497L96.8362 81.035L151.498 20.0559L156.468 45.972L101.096 110H78.3788L47.1433 61.979Z" stroke="white"/>
+            <path d="M169.956 38.3497L156.468 1H209L140.85 110H121.683L169.956 38.3497Z" stroke="white"/>
+            </svg>
+            
+      </footer>
+    </div>
+
+    <!-- Chat Section -->
+    <div id="right-side">
+      <div id="chat-header">
+        <img src="https://via.placeholder.com/40" alt="Pervalovisk">
+        <div class="chat-info">
+          <h3 style="color: black; font-family: Inter;font-weight: 400;">Pervalovisk</h3>
+          <p>Online</p>
+        </div>
+      </div>
+      <div id="chat">
+        <!-- Mensagens de Pervalovisk -->
+        <div class="message-box left">
+          <div class="message-sender">Pervalovisk:</div>
+          <div class="message-content">Lucass!! Você viu minhas chaves do carro???</div>
+        </div>
+        <!-- Mensagens de Lucas -->
+        <div class="message-box right">
+          <div class="message-sender">Lucas:</div>
+          <div class="message-content">Não eu não vi elas! Não esqueceu na sua bolsa??</div>
+        </div>
+        <div class="message-box left">
+          <div class="message-sender">Pervalovisk:</div>
+          <div class="message-content">Naoo, olha na minha gaveta do escritorio, pfv!!</div>
+        </div>
+        <div class="message-box right">
+          <div class="message-sender">Lucas:</div>
+          <div class="message-content">Ultima vez que vi tava sobre a estante</div>
+        </div>
+        <div class="message-box left">
+          <div class="message-sender">Pervalovisk:</div>
+          <div class="message-content">Acheii!! Estavam lá mesmo. Muito obrigada, Lucas!!</div>
+        </div>
+      </div>
+      <div id="chat-footer">
+        <input type="text" placeholder="Escreva">
+        <button>&#9658;</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

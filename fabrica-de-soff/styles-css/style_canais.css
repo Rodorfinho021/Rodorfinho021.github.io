@@ -1,0 +1,372 @@
+/*body {
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(
+        to top right, 
+        #2C003E 10%,  
+        #3B006F 30%,  
+        #1A1A40 50%,  
+        #00072D 70%,  
+        #000000 100%  
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}*/ 
+body {
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(
+        to right, 
+        #800080,
+        #000 100%
+    );
+    align-items: center;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    
+}
+
+.pesquisa-conteiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    margin-left: 50px;
+    
+}
+.pi{
+    margin-left: 365px;
+    text-align: center;
+    align-items: center;
+}
+.barra-pesquisa {
+    width: 550px;
+    padding: 10px;
+    border: 2px solid #ccc; 
+    border-radius: 40px;
+    outline: none;
+    font-size: 16px;
+    margin-left: 300px;
+    margin-top: 50px;
+    
+}
+
+.pesquisa-conteiner:focus {
+    border-color: #007BFF; 
+}
+
+.pesquisa-conteiner button {
+    padding: 10px 10px; 
+    background-color: #007BFF; 
+    color: white; 
+    margin-top: 50px; 
+    border: none; 
+    border-radius: 0 40px 40px 0; 
+    cursor: pointer; 
+    font-size: 16px; 
+    height: auto; 
+    margin: 0;
+    border-radius: 50%; 
+    margin-top: auto;
+    margin-left: 5px;
+    
+    
+}
+
+.pesquisa-conteiner button img {
+    width: 15px; 
+    height: auto; 
+}
+
+
+.pesquisa-conteiner button:hover {
+    background-color: #0056b3; 
+}
+.lado{
+    display: flex;
+    text-align: center;
+}
+
+
+h1, p {
+    margin: 0;
+}
+p{
+    text-align: center;
+    color: aliceblue;
+    font-size: 20px;
+    margin-left: 300px ;
+}
+
+.conteiner-pai {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    text-align: center;
+    margin-left: 200px;
+    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+.conteiner-filho {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    
+}
+.carde {
+    text-align: center;
+    background-image: linear-gradient(
+        to bottom, 
+        #a71aa7,
+        #000 100%
+    );
+    border: 3px solid #000;
+    border-radius: 20px;
+    padding: 50px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    width: 150px;
+
+    
+}
+.carde h1 {
+    font-size: 16px;
+
+}
+.carde button {
+    display: flex;
+    background-color: #00ff80;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.logo {
+    max-width: 100%; /* Ajusta para ocupar toda a largura disponível */
+    height: auto; 
+    margin: 0; /* Remove a margem externa */
+    border-radius: 50%; /* Mantém o arredondamento */
+    border: 3px solid #35424a; /* Borda da imagem */
+    margin-top: 20px; /* Ajusta a posição da imagem a partir do topo */
+}
+
+    
+.titulo {
+    text-align: center;
+    color:aliceblue;
+    font-size: 15px;
+    margin-right: 350px;
+}
+.filtros{
+    align-items: center;
+    margin: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    text-align: center;
+    margin-left: 200px;
+    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    
+}
+
+.filtros-filhos{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.car{
+    background-image: linear-gradient(
+        to bottom, 
+        #a71aa7,
+        #000 100%
+    );
+    border: 3px solid #000;
+    border-radius: 20px;
+    padding: 50px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    width: 150px;
+}
+.filtros-titulos{  
+    text-align: center;
+    color:#FFFFFF;
+    font-size: 15px;
+    margin-right: 350px;
+    
+}
+.car h1 {
+    font-size: 16px;
+    margin: 0 0 10px;
+}
+.car button {
+    padding: 5px 10px;
+    background-color: #00ff80;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.n{
+    color: aliceblue;
+}
+.nome{
+    color: #FFFFFF;
+}
+
+.img-car {
+    margin-bottom: 10px;
+}
+
+.img-car img {
+    width: 80px; 
+    height: 80px;
+    border-radius: 50%; 
+    object-fit: cover; 
+}
+
+.conteiner-lateral {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; /* Alinha os elementos para o topo */
+    text-align: center; 
+    margin: 0; /* Remove a margem */
+    padding: 0; /* Remove o padding */
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.44);
+    z-index: 10;
+    
+}
+
+.logo{
+    max-width: 100%; /* Ajusta para ocupar toda a largura disponível */
+    height: auto; 
+    margin: 0; /* Remove a margem externa */
+    border-radius: 50%; /* Mantém o arredondamento */
+    border: 3px solid #35424a; /* Borda da imagem */
+    margin-top: 20px; /* Ajusta a posição da imagem a partir do topo */
+}
+
+.card {
+    /* Estilos para cada cartão de canal */
+    display: flex; /* Alinha os elementos horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    width: 100%;
+    
+    
+}
+
+.botao {
+    /* Estilos para o botão do canal */
+    background-image: linear-gradient(
+        to right, 
+        #800080 30%,
+        #000 
+    );
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove a borda do botão */
+    padding: 50px 10px; /* Espaçamento interno do botão */
+    border-radius: 500px; /* Arredonda as bordas do botão */
+    cursor: pointer; /* Muda o cursor para um ponteiro */
+    transition: background-color 0.3s ease; /* Transição suave para o hover */
+    display: flex; /* Alinha os elementos horizontalmente dentro do botão */
+    align-items: center; /* Centraliza verticalmente dentro do botão */
+    width: auto;
+    height: 70px;
+    margin: auto;
+    margin-top: 100px;
+    border: 3px solid #35424a; 
+
+     
+    
+    
+}
+ a{
+    text-decoration: none;
+}
+
+.botao:hover {
+    /* Estilos para o botão quando o mouse está sobre ele */
+    background-color: al; /* Cor de fundo do botão ao passar o mouse */
+}
+
+
+.modifica-img {
+    /* Estilos para a imagem do perfil */
+    width: 40px; /* Largura da imagem */
+    height: 40px; /* Altura da imagem */
+    border-radius: 50%; /* Arredonda a imagem */
+    margin-top: 20px; 
+    
+    
+}
+.card p{
+    font-size: 20px;
+    margin-left:50px;
+    text-align: center;
+    margin-right: 50px;
+}
+
+.icone-conteiner {
+    display: flex; 
+    justify-content: center; 
+    gap: 15px; 
+    padding: 10px; 
+    margin-top: 100px;
+}
+
+.icone {
+    width: 40px;
+    height: auto; 
+    cursor: pointer; 
+    transition: transform 0.2s; 
+}
+
+.icone:hover {
+    transform: scale(1.1); 
+}
+
+
+@media (max-width: 768px) {
+    .conteiner-lateral {
+        display: none; /* Oculta a sidebar em telas menores */
+    }
+    .conteiner-filho {
+        flex-direction: column; /* Faz os cards quebrarem em novas linhas */
+    }
+}
+
+@media (max-width: 480px) {
+    .conteiner-lateral {
+        display: block;
+        width: 30px;  /* Largura mínima para a sidebar */
+        height: 30px; /* Altura mínima para a sidebar */
+        background-color: #ccc; /* Cor de fundo para a sidebar */
+        text-align: center;
+        line-height: 30px; /* Centraliza o texto verticalmente */
+        font-size: 20px;
+        border-radius: 15px; /* Para deixar os cantos arredondados */
+    }
+}
